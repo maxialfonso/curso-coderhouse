@@ -1,0 +1,38 @@
+.content_nav {
+    display: flex;
+    justify-content:center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.content_nav li{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.content_nav li a{
+  text-decoration: none;
+  color: white;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.content_nav li a::after{
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform-origin: right;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 0.5s;
+
+}
+
+.content_nav li a:hover::after{
+    transform: scale(1, 1);
+}

@@ -1,17 +1,20 @@
 import React from 'react';
-import logo from '../../logo.svg';
+import CartWidget from '../CartWidget/CartWidget';
+import ListaNav from '../ListaNav/ListaNav';
+import Logo from '../Logo/Logo';
 import './NavBar.css';
+
+const menu = ["Productos", "Servicios", "Ofertas", "Ayuda"];
 
 const NavBar = () => (
     <section className="contenedor">
         <nav className="nav">
-            <img src={logo} className="App-logo" alt="logo" />
-            <ul className="content_nav">
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
+            <Logo/>
+ 
+            <ListaNav menu={menu}/>
+
+            <CartWidget/>
+
         </nav>
     </section>
 );
