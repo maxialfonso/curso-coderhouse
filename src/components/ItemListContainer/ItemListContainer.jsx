@@ -1,18 +1,18 @@
-import { Box } from '@mui/material'
+// import { Box } from '@mui/material'
+import { Container } from '@mui/system'
 import React from 'react'
-import Item from '../Item/Item'
+// import Item from '../Item/Item'
+import ItemList from '../ItemList/ItemList'
 
 
 
 const ItemListContainer = ({ saludo }) => {
+
   return (
-    <>
-      <p>{saludo}</p>
-        
-      <Box sx={{ width: 1/5 }}>
-        <Item id={1}/>
-      </Box>
-    </>
+      <Container>
+        <p>{saludo}</p>
+        <ItemList />
+      </Container>
   )
 }
 

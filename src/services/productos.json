@@ -1,0 +1,132 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "name": "React",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "2",
+      "name": "Vue",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "3",
+      "name": "Angular",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "4",
+      "name": "PHP",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "5",
+      "name": "NODE",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "6",
+      "name": "MySql",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "7",
+      "name": "Git",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "8",
+      "name": "Material UI",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "9",
+      "name": "NPM",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "10",
+      "name": "Jira",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "11",
+      "name": "Git Hub",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "12",
+      "name": "HTML",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "13",
+      "name": "CSS",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "14",
+      "name": "JavaScript",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "15",
+      "name": "Postman",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    },
+    {
+      "id": "16",
+      "name": "SmarGit",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 10,
+      "price": 49.99,
+      "category": "Curso"
+    } 
+  ]
+}

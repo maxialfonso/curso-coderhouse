@@ -1,35 +1,33 @@
 import React from 'react'
 import { Card, CardActionArea, CardMedia, CardContent, Typography } from '@mui/material';
-import ItemCount from '../ItemCount/ItemCount'
 
-function Item({id}) {
+function Item({ producto }) {
 
-  const url = `./assets/images/products/${id}/home.png`
+  const { id, name, description, category } = producto;
+
+  const url = `./assets/images/products/1/home.png`
 
   return (
-    <Card>
-
+    <Card sx={{ maxWidth: 300 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           image={url}
-          alt="Curso React"
+          alt={name}
+          height="200"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Curso de React JS
+          <Typography variant="h5" component="div">
+            {name}
+          </Typography>
+          <Typography variant="subtitle1" color="text.secondary" component="div">
+            {category}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito
-            de compras.
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>
-
-      <CardContent>
-        <ItemCount stock={10} init={5} />
-      </CardContent>
-
     </Card>
   )
 }
