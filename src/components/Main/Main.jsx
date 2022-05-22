@@ -5,7 +5,7 @@ import "./main.css"
 const Main = () => {
   return (
     <main>
-        <ItemListContainer saludo="Bienvenido a la primera página con React de Maxi Alfonso"/>
+        <ItemListContainer greeting="Bienvenido a la primera página con React de Maxi Alfonso"/>
     </main>
   )
 }

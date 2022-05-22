@@ -1,16 +1,12 @@
-// import { Box } from '@mui/material'
 import { Container } from '@mui/system'
 import React from 'react'
-// import Item from '../Item/Item'
 import ItemList from '../ItemList/ItemList'
 
-
-
-const ItemListContainer = ({ saludo }) => {
+const ItemListContainer = ({ greeting }) => {
 
   return (
       <Container>
-        <p>{saludo}</p>
+        <p>{greeting}</p>
         <ItemList />
       </Container>
   )

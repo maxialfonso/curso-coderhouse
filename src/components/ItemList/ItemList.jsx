@@ -43,14 +43,12 @@ export default function ItemList() {
         <>
             {loading && "Loading..."}
             <Grid sx={{ flexGrow: 1 }} container>
-                <Grid item xs={12}>
-                    <Grid container justifyContent="flex-start" rowSpacing={6}>
-                        {productos.map((producto) => (
-                            <Grid item key={producto.id} xs={4}>
-                                <Item producto={producto}></Item>
-                            </Grid>
-                        ))}
-                    </Grid>
+                <Grid container justifyContent="flex-start" rowSpacing={6}>
+                    {productos.map((producto) => (
+                        <Grid item key={producto.id} xs={4}>
+                            <Item producto={producto}></Item>
+                        </Grid>
+                    ))}
                 </Grid>
             </Grid>
         </>
