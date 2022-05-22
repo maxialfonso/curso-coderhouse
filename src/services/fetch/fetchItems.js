@@ -2,10 +2,17 @@ import PRODUCTS from "../productos.json";
 const productos = PRODUCTS.productos;
 
 
-export function fetchItems() {
+export function fetchItems(id = false) {
     return new Promise ( (resolve, reject) =>{
         setTimeout(() => {
-            resolve(productos)
+
+            if (!id){ 
+                resolve(productos);
+            } else {
+                const item = productos.find( p => p.id === id );
+                resolve(item);
+            }
+
             // reject("Exploto todooo!");
         }, 2000)
     })

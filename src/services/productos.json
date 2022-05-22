@@ -4,8 +4,9 @@
       "id": "1",
       "name": "React",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
+      "stock": 5,
+      "price": 100,
+      "type": "Front-end",
       "category": "Curso"
     },
     {
@@ -13,71 +14,80 @@
       "name": "Vue",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
       "stock": 10,
-      "price": 49.99,
-      "category": "Curso"
+      "price": 15.99,
+      "type": "Front-end",
+      "category": "Carrera"
     },
     {
       "id": "3",
       "name": "Angular",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
-      "category": "Curso"
+      "stock": 11,
+      "price": 4499.99,
+      "type": "Front-end",
+      "category": "Carrera"
     },
     {
       "id": "4",
       "name": "PHP",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
-      "category": "Curso"
+      "stock": 12,
+      "price": 300.99,
+      "type": "Back-end",
+      "category": "Carrera"
     },
     {
       "id": "5",
       "name": "NODE",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
+      "stock": 15,
+      "price": 11.99,
+      "type": "Back-end",
       "category": "Curso"
     },
     {
       "id": "6",
       "name": "MySql",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
+      "stock": 3,
+      "price": 200.99,
+      "type": "Base de datos",
       "category": "Curso"
     },
     {
       "id": "7",
       "name": "Git",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
-      "category": "Curso"
+      "stock": 20,
+      "price": 55.99,
+      "type": "Utilidad",
+      "category": "Carrera"
     },
     {
       "id": "8",
       "name": "Material UI",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
+      "stock": 6,
+      "price": 66.99,
+      "type": "Utilidades",
       "category": "Curso"
     },
     {
       "id": "9",
       "name": "NPM",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
+      "stock": 21,
+      "price": 77.99,
+      "type": "Utilidades",
       "category": "Curso"
     },
     {
       "id": "10",
       "name": "Jira",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
+      "stock": 17,
+      "price": 489.99,
+      "type": "Utilidades",
       "category": "Curso"
     },
     {
@@ -85,47 +95,53 @@
       "name": "Git Hub",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
       "stock": 10,
-      "price": 49.99,
+      "price": 419.99,
+      "type": "Utilidades",
       "category": "Curso"
     },
     {
       "id": "12",
       "name": "HTML",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
-      "category": "Curso"
+      "stock": 4,
+      "price": 10.99,
+      "type": "Front-end",
+      "category": "Carrera"
     },
     {
       "id": "13",
       "name": "CSS",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
+      "stock": 8,
+      "price": 100.99,
+      "type": "Front-end",
       "category": "Curso"
     },
     {
       "id": "14",
       "name": "JavaScript",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
-      "category": "Curso"
+      "stock": 2,
+      "price": 2.99,
+      "type": "Front-end",
+      "category": "Carrera"
     },
     {
       "id": "15",
       "name": "Postman",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
+      "stock": 12,
+      "price": 300.99,
+      "type": "Utilidades",
       "category": "Curso"
     },
     {
       "id": "16",
       "name": "SmarGit",
       "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
-      "stock": 10,
-      "price": 49.99,
+      "stock": 7,
+      "price": 600.99,
+      "type": "Utilidades",
       "category": "Curso"
     } 
   ]
