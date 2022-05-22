@@ -1,8 +1,8 @@
 import React from 'react'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
-import "./main.css"
+import "./mainHome.css"
 
-const Main = () => {
+const MainHome = () => {
   return (
     <main>
         <ItemListContainer greeting="Bienvenido a la primera página con React de Maxi Alfonso"/>
@@ -10,4 +10,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default MainHome
