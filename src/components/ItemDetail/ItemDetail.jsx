@@ -4,7 +4,7 @@ import "./itemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { Container } from '@mui/system';
 
-const url = `./assets/images/products/1/home.png`
+const url = `/assets/images/products/1/home.png`;
 
 export default function ItemDetail({ producto }) {
     return (

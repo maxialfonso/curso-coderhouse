@@ -7,7 +7,7 @@
       "stock": 5,
       "price": 100,
       "type": "Front-end",
-      "category": "Curso"
+      "category": "Diplomatura"
     },
     {
       "id": "2",
@@ -16,7 +16,7 @@
       "stock": 10,
       "price": 15.99,
       "type": "Front-end",
-      "category": "Carrera"
+      "category": "Diplomatura"
     },
     {
       "id": "3",
@@ -34,7 +34,7 @@
       "stock": 12,
       "price": 300.99,
       "type": "Back-end",
-      "category": "Carrera"
+      "category": "Diplomatura"
     },
     {
       "id": "5",
@@ -43,7 +43,7 @@
       "stock": 15,
       "price": 11.99,
       "type": "Back-end",
-      "category": "Curso"
+      "category": "Taller"
     },
     {
       "id": "6",
@@ -88,7 +88,7 @@
       "stock": 17,
       "price": 489.99,
       "type": "Utilidades",
-      "category": "Curso"
+      "category": "Taller"
     },
     {
       "id": "11",
@@ -124,7 +124,7 @@
       "stock": 2,
       "price": 2.99,
       "type": "Front-end",
-      "category": "Carrera"
+      "category": "Taller"
     },
     {
       "id": "15",

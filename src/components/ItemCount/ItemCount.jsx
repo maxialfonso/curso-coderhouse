@@ -50,7 +50,7 @@ const ItemCount = ({ stock, init }) => {
                 </IconButton>
             </Grid>
             <Grid className='flex' item xs={12}>
-                <Button color="primary">
+                <Button color="primary" disabled={cantidad === 0}>
                     Agregar al carrito
                 </Button>
             </Grid>
