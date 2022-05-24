@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CardMedia, Divider, Typography, Box, Rating } from '@mui/material';
 import "./itemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { Container } from '@mui/system';
-
-const url = `/assets/images/products/1/home.png`;
+import { onAdd } from '../../services/functions/onAdd';
 
 export default function ItemDetail({ producto }) {
+    
+    const url = `/assets/images/products/1/home.png`;
+ 
     return (
         <>
 
@@ -80,7 +82,7 @@ export default function ItemDetail({ producto }) {
                     </Box>
 
                     <Container maxWidth="xs">
-                        <ItemCount stock={producto.stock} init={0}/>
+                        <ItemCount stock={producto.stock} init={0} onAdd={onAdd}/>
                     </Container>
 
                 </Box>

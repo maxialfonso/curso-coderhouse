@@ -3,8 +3,9 @@ import "./itemCount.css";
 import { IconButton, Grid, Button, Input } from '@mui/material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+import { Link } from 'react-router-dom';
 
-const ItemCount = ({ stock, init }) => {
+const ItemCount = ({ stock, init, onAdd }) => {
 
     const [cantidad, setCantidad] = useState(init);
 
@@ -50,8 +51,15 @@ const ItemCount = ({ stock, init }) => {
                 </IconButton>
             </Grid>
             <Grid className='flex' item xs={12}>
-                <Button color="primary" disabled={cantidad === 0}>
+                <Button color="primary" disabled={cantidad === 0} onClick={onAdd}>
                     Agregar al carrito
+                </Button>
+            </Grid>
+            <Grid className='flex' item xs={12}>
+                <Button color="primary">
+                    <Link to={`/cart`} style={{ textDecoration: 'none' }}>
+                        Finalizar Compra
+                    </Link>
                 </Button>
             </Grid>
         </Grid>
