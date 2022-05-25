@@ -7,7 +7,8 @@
       "stock": 5,
       "price": 100,
       "type": "Front-end",
-      "category": "Diplomatura"
+      "category": "Diplomatura",
+      "url": "https://interacso.com/blog/wp-content/uploads/2019/05/reactluminoso.png"
     },
     {
       "id": "2",
@@ -16,7 +17,8 @@
       "stock": 10,
       "price": 15.99,
       "type": "Front-end",
-      "category": "Diplomatura"
+      "category": "Diplomatura",
+      "url": "https://tincode-django.s3.amazonaws.com/media/courses/fc15a121-99ef-4118-9d7b-40cdd53e7825.jpg"
     },
     {
       "id": "3",
@@ -25,7 +27,8 @@
       "stock": 11,
       "price": 4499.99,
       "type": "Front-end",
-      "category": "Carrera"
+      "category": "Carrera",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"
     },
     {
       "id": "4",
@@ -34,7 +37,9 @@
       "stock": 12,
       "price": 300.99,
       "type": "Back-end",
-      "category": "Diplomatura"
+      "category": "Diplomatura",
+      "url": "https://desarrolloweb.com/storage/tag_images/actual/6T8eGecQ0XXvTHOvic4ba8mlQXmSEW3vrI7jenmv.png"
+      
     },
     {
       "id": "5",
@@ -43,7 +48,8 @@
       "stock": 15,
       "price": 11.99,
       "type": "Back-end",
-      "category": "Taller"
+      "category": "Taller",
+      "url": "https://s3-us-west-2.amazonaws.com/devcodepro/media/tutorials/instalacion-de-nodejs-en-ubuntu-t1.jpg"
     },
     {
       "id": "6",
@@ -52,7 +58,8 @@
       "stock": 3,
       "price": 200.99,
       "type": "Base de datos",
-      "category": "Curso"
+      "category": "Curso",
+      "url": "https://professor-falken.com/wp-content/uploads/2017/06/Como-ver-las-consultas-que-se-estan-ejecutando-en-MySQL-professor-falken.com_.jpg"
     },
     {
       "id": "7",
@@ -61,7 +68,8 @@
       "stock": 20,
       "price": 55.99,
       "type": "Utilidad",
-      "category": "Carrera"
+      "category": "Carrera",
+      "url": "data:image/png;base64,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"
     },
     {
       "id": "8",
@@ -70,7 +78,8 @@
       "stock": 6,
       "price": 66.99,
       "type": "Utilidades",
-      "category": "Curso"
+      "category": "Curso",
+      "url": "https://cdn.filestackcontent.com/5yjLJYBrQ6EHpN9dK0ak"
     },
     {
       "id": "9",
@@ -79,7 +88,8 @@
       "stock": 21,
       "price": 77.99,
       "type": "Utilidades",
-      "category": "Curso"
+      "category": "Curso",
+      "url": "https://juststickers.in/wp-content/uploads/2016/03/npm-coaster.png"
     },
     {
       "id": "10",
@@ -88,7 +98,8 @@
       "stock": 17,
       "price": 489.99,
       "type": "Utilidades",
-      "category": "Taller"
+      "category": "Taller",
+      "url": "https://effectiveexperiments.com/wp-content/uploads/2021/11/jira_hero_with_text.jpeg"
     },
     {
       "id": "11",
@@ -97,7 +108,8 @@
       "stock": 10,
       "price": 419.99,
       "type": "Utilidades",
-      "category": "Curso"
+      "category": "Curso",
+      "url": "https://1.bp.blogspot.com/-Ez_07BOEQdg/YUpIgc95XqI/AAAAAAABevQ/dHiUyADJBQ03yWF_mwW4ZkTXrSUWumozQCLcBGAsYHQ/s998/github.webp"
     },
     {
       "id": "12",
@@ -106,7 +118,8 @@
       "stock": 4,
       "price": 10.99,
       "type": "Front-end",
-      "category": "Carrera"
+      "category": "Carrera",
+      "url": "https://professor-falken.com/wp-content/uploads/2017/07/Como-redirigir-o-redireccionar-a-otra-pagina-web-en-HTML-professor-falken.com_.jpg"
     },
     {
       "id": "13",
@@ -115,7 +128,8 @@
       "stock": 8,
       "price": 100.99,
       "type": "Front-end",
-      "category": "Curso"
+      "category": "Curso",
+      "url": "https://extassisnetwork.com/tutoriales/wp-content/uploads/Que-es-CSS.jpg"
     },
     {
       "id": "14",
@@ -124,7 +138,8 @@
       "stock": 2,
       "price": 2.99,
       "type": "Front-end",
-      "category": "Taller"
+      "category": "Taller",
+      "url": "https://terminalroot.com.br/assets/img/js/js.jpg"
     },
     {
       "id": "15",
@@ -133,7 +148,8 @@
       "stock": 12,
       "price": 300.99,
       "type": "Utilidades",
-      "category": "Curso"
+      "category": "Curso",
+      "url": "https://media.slid.es/uploads/327261/images/5065937/pm-logo-vert.png"
     },
     {
       "id": "16",
@@ -142,7 +158,8 @@
       "stock": 7,
       "price": 600.99,
       "type": "Utilidades",
-      "category": "Curso"
+      "category": "Curso",
+      "url": "https://smartgit.userecho.com/s/attachments/19994/0/0/project_logo_qHgsJ8k.png"
     } 
   ]
 }

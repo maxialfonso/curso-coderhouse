@@ -16,33 +16,34 @@ const ItemDetailContainer = () => {
   //Param Route
   let { id } = useParams();
 
-  //Functions
-  function fetchProducto() {
-    setLoading(true);
-    setError(false);
-
-    const productPromise = fetchItems({id});
-
-    productPromise
-      .then((resultado) => {
-        if (typeof resultado === 'object') {
-          setProducto(resultado)
-        } else {
-          throw new Error("Problema con el tipo de elemento");
-        }
-      })
-      .catch((error) => {
-        setError(true);
-        console.log(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      })
-  }
-
   //UseEffect
   useEffect(() => {
+
+    function fetchProducto() {
+      setLoading(true);
+      setError(false);
+  
+      const productPromise = fetchItems({id});
+  
+      productPromise
+        .then((resultado) => {
+          if (typeof resultado === 'object') {
+            setProducto(resultado)
+          } else {
+            throw new Error("Problema con el tipo de elemento");
+          }
+        })
+        .catch((error) => {
+          setError(true);
+          console.log(error);
+        })
+        .finally(() => {
+          setLoading(false);
+        })
+    }
+
     fetchProducto();
+    
   }, [id]);
 
   if (error) { return (<>{mensajeError}</>) }

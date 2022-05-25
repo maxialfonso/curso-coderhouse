@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 
 function Item({ producto }) {
 
-  const { id, name, description, category } = producto;
-
-  const url = "./assets/images/products/1/home.png";
-
+  const { id, name, description, category, url } = producto;
+  
   return (
     <Link to={`/item/${id}`} style={{ textDecoration: 'none' }}>
       <Card sx={{ maxWidth: 300 }}>
