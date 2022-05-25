@@ -1,17 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { CardMedia, Divider, Typography, Box, Rating } from '@mui/material';
 import "./itemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { Container } from '@mui/system';
-import { onAdd } from '../../services/functions/onAdd';
+import BtnFinalizarCompra from '../BtnFinalizarCompra/BtnFinalizarCompra';
+// import { onAdd } from '../../services/functions/onAdd';
 
 export default function ItemDetail({ producto }) {
-    
-    const url = `/assets/images/products/1/home.png`;
- 
+
+    const [visibility, setVisibility] = useState(true);
+
+    function onAdd() {
+        setVisibility(false);
+        //alert("Producto Agregado al Carrito");
+    }
+
     return (
         <>
-
             <Box
                 sx={{
                     display: 'flex',
@@ -22,7 +27,7 @@ export default function ItemDetail({ producto }) {
                 <Box className="gridImagen">
                     <CardMedia
                         component="img"
-                        image={url}
+                        image={producto.url}
                         alt={producto.name}
                         sx={{ width: 400 }}
                     />
@@ -82,7 +87,10 @@ export default function ItemDetail({ producto }) {
                     </Box>
 
                     <Container maxWidth="xs">
-                        <ItemCount stock={producto.stock} init={0} onAdd={onAdd}/>
+                        {visibility
+                            ? <ItemCount stock={producto.stock} init={0} onAdd={onAdd} />
+                            : <BtnFinalizarCompra/>
+                        }
                     </Container>
 
                 </Box>

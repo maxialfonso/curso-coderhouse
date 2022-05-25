@@ -55,13 +55,6 @@ const ItemCount = ({ stock, init, onAdd }) => {
                     Agregar al carrito
                 </Button>
             </Grid>
-            <Grid className='flex' item xs={12}>
-                <Button color="primary">
-                    <Link to={`/cart`} style={{ textDecoration: 'none' }}>
-                        Finalizar Compra
-                    </Link>
-                </Button>
-            </Grid>
         </Grid>
     )
 }
