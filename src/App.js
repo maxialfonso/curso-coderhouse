@@ -8,25 +8,28 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import Error404Page from './pages/Error404Page/Error404Page';
 import Footer from './components/Footer/Footer';
 import CartPage from "./pages/CartPage/CartPage"
+import { HOCContext } from './contexts/CartContext/CartContext';
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HOCContext>
+        <BrowserRouter>
 
-        <Header />
+          <Header />
 
-        <Routes>
-          <Route path='/' element={ <ItemListContainer greeting="Bienvenido"/> }/>
-          <Route path='/category/:categoryName' element={ <ItemListContainer greeting="Bienvenido"/> }/>
-          <Route path='/item/:id' element={ <ItemDetailContainer/> }/>
-          <Route path='/cart' element={ <CartPage/> }/>
-          <Route path='*' element={<Error404Page/>}/>
-        </Routes>
+          <Routes>
+            <Route path='/' element={<ItemListContainer greeting="Bienvenido" />} />
+            <Route path='/category/:categoryName' element={<ItemListContainer greeting="Bienvenido" />} />
+            <Route path='/item/:id' element={<ItemDetailContainer />} />
+            <Route path='/cart' element={<CartPage />} />
+            <Route path='*' element={<Error404Page />} />
+          </Routes>
 
-        <Footer/>
+          <Footer />
 
-      </BrowserRouter>
+        </BrowserRouter>
+      </HOCContext>
 
     </>
   );

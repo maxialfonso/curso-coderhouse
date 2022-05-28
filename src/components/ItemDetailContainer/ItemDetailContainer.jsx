@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import "./itemDetailContainer.css"
 import { fetchItems } from '../../services/fetch/fetchItems';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import Spinner from '../Spinner/Spinner';
 
 const ItemDetailContainer = () => {
   //Estados
@@ -22,9 +23,9 @@ const ItemDetailContainer = () => {
     function fetchProducto() {
       setLoading(true);
       setError(false);
-  
-      const productPromise = fetchItems({id});
-  
+
+      const productPromise = fetchItems({ id });
+
       productPromise
         .then((resultado) => {
           if (typeof resultado === 'object') {
@@ -43,14 +44,18 @@ const ItemDetailContainer = () => {
     }
 
     fetchProducto();
-    
+
   }, [id]);
 
   if (error) { return (<>{mensajeError}</>) }
 
   return (
     <main>
-      {loading && "Loading..."}
+      {loading &&
+        <Container>
+          <Spinner />
+        </Container>
+      }
       {producto && <>
         <Container>
           <ItemDetail producto={producto} />

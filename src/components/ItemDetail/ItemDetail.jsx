@@ -1,18 +1,25 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { CardMedia, Divider, Typography, Box, Rating } from '@mui/material';
-import "./itemDetail.css";
-import ItemCount from "../ItemCount/ItemCount";
 import { Container } from '@mui/system';
+
+import "./itemDetail.css";
+
+import ItemCount from "../ItemCount/ItemCount";
 import BtnFinalizarCompra from '../BtnFinalizarCompra/BtnFinalizarCompra';
+import { CartContext } from '../../contexts/CartContext/CartContext';
+
 // import { onAdd } from '../../services/functions/onAdd';
+
 
 export default function ItemDetail({ producto }) {
 
+    const { addToCart } = useContext(CartContext)
+
     const [visibility, setVisibility] = useState(true);
 
-    function onAdd() {
+    function onAdd(id, value) {
+        addToCart(id, value);
         setVisibility(false);
-        //alert("Producto Agregado al Carrito");
     }
 
     return (
@@ -88,7 +95,7 @@ export default function ItemDetail({ producto }) {
 
                     <Container maxWidth="xs">
                         {visibility
-                            ? <ItemCount stock={producto.stock} init={0} onAdd={onAdd} />
+                            ? <ItemCount id={producto.id} stock={producto.stock} init={0} onAdd={onAdd} />
                             : <BtnFinalizarCompra/>
                         }
                     </Container>

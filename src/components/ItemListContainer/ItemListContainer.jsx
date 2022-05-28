@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList'
 import { fetchItems } from '../../services/fetch/fetchItems';
 import { useParams } from 'react-router-dom';
+import Spinner from '../Spinner/Spinner';
 
 const ItemListContainer = ({ greeting }) => {
 
-  const {categoryName} = useParams();
-  
+  const { categoryName } = useParams();
+
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -19,24 +20,24 @@ const ItemListContainer = ({ greeting }) => {
     function fetchProductos() {
       setLoading(true);
       setError(false);
-  
-      const productsPromise = fetchItems({categoryName});
+
+      const productsPromise = fetchItems({ categoryName });
       productsPromise
         .then((resultado) => {
-  
+
           if (Array.isArray(resultado)) {
             setProductos(resultado)
           } else {
             throw new Error("Problema con el tipo de elemento");
           }
-  
+
         })
-  
+
         .catch((error) => {
           setError(true);
           console.log(error);
         })
-  
+
         .finally(() => {
           setLoading(false);
         })
@@ -50,12 +51,19 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <main>
-      {loading && "Loading..."}
-      <Container>
+      {loading &&
+        <Container >
+          <Spinner />
+        </Container>
+      }
+      {!loading &&
+        <Container>
         <p>{greeting}</p>
         <ItemList productos={productos} />
       </Container>
-    </main>
+      }
+      
+    </main >
   )
 }
 

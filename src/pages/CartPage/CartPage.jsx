@@ -7,7 +7,7 @@ function CartPage() {
         <div className="error-container">
             <h1 className='titulo'>Proximamente</h1>
             <p className='subtitulo'>Contenido del Carrito...</p>
-            <Link className='return' to={"/"} style={{ textDecoration: 'none' }}> Regresar </Link>
+            <Link className='return' to={"/"} style={{ textDecoration: 'none' }}> Regresar a Catálogo </Link>
         </div>
     )
 }

@@ -3,40 +3,43 @@ import "./itemCount.css";
 import { IconButton, Grid, Button, Input } from '@mui/material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
-import { Link } from 'react-router-dom';
 
-const ItemCount = ({ stock, init, onAdd }) => {
+const ItemCount = ({ id, stock, init, onAdd }) => {
 
-    const [cantidad, setCantidad] = useState(init);
+    const [value, setValue] = useState(init);
 
-    function restarCantidad() {
-        const resultado = cantidad - 1;
+    function handleClickAddToCart() {
+        onAdd(id, value);
+    }
+
+    function handleClickRestarCantidad() {
+        const resultado = value - 1;
         if (resultado < 0) {
             return;
         } else {
-            setCantidad(cantidad - 1);
+            setValue(value - 1); 
         }
     }
 
-    function sumarCantidad() {
-        const resultado = cantidad + 1;
+    function handleClickSumarCantidad() {
+        const resultado = value + 1;
         if (resultado > stock) {
             return;
         } else {
-            setCantidad(cantidad + 1);
+            setValue(value + 1);
         }
     }
 
     return (
         <Grid container>
             <Grid className='flex' item xs={3}>
-                <IconButton onClick={restarCantidad} color="primary" component="span">
+                <IconButton onClick={ () => { handleClickRestarCantidad() }} color="primary" component="span">
                     <RemoveCircleOutlineIcon />
                 </IconButton>
             </Grid>
             <Grid className='flex' item xs={6}>
                 <Input
-                    value={cantidad}
+                    value={value}
                     variant='standard'
                     disableUnderline
                     inputProps={{
@@ -46,12 +49,12 @@ const ItemCount = ({ stock, init, onAdd }) => {
                 />
             </Grid>
             <Grid className='flex' item xs={3}>
-                <IconButton onClick={sumarCantidad} color="primary" component="span">
+                <IconButton onClick={ () => { handleClickSumarCantidad() } } color="primary" component="span">
                     <AddCircleOutlineIcon />
                 </IconButton>
             </Grid>
             <Grid className='flex' item xs={12}>
-                <Button color="primary" disabled={cantidad === 0} onClick={onAdd}>
+                <Button color="primary" disabled={value === 0}  onClick={ () => { handleClickAddToCart() } }>
                     Agregar al carrito
                 </Button>
             </Grid>
