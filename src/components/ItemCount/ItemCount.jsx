@@ -4,12 +4,13 @@ import { IconButton, Grid, Button, Input } from '@mui/material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
-const ItemCount = ({ id, stock, init, onAdd }) => {
+//const ItemCount = ({ id, stock, init, onAdd }) => {
+const ItemCount = ({ producto, init, onAdd }) => {
 
     const [value, setValue] = useState(init);
 
     function handleClickAddToCart() {
-        onAdd(id, value);
+        onAdd(producto, value);
     }
 
     function handleClickRestarCantidad() {
@@ -23,7 +24,7 @@ const ItemCount = ({ id, stock, init, onAdd }) => {
 
     function handleClickSumarCantidad() {
         const resultado = value + 1;
-        if (resultado > stock) {
+        if (resultado > producto.stock) {
             return;
         } else {
             setValue(value + 1);

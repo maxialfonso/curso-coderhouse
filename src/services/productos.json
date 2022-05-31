@@ -160,6 +160,36 @@
       "type": "Utilidades",
       "category": "Curso",
       "url": "https://smartgit.userecho.com/s/attachments/19994/0/0/project_logo_qHgsJ8k.png"
+    }, 
+    {
+      "id": "17",
+      "name": "Flutter",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 3,
+      "price": 1523.3,
+      "type": "Mobile",
+      "category": "Diplomatura",
+      "url": "https://como-programar.net/wp-content/uploads/2021/03/flutter.png"
+    }, 
+    {
+      "id": "18",
+      "name": "Kotlin",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 5,
+      "price": 123.3,
+      "type": "Mobile",
+      "category": "Taller",
+      "url": "https://ih1.redbubble.net/image.684259797.9447/pp,840x830-pad,1000x1000,f8f8f8.u3.jpg"
+    },
+    {
+      "id": "19",
+      "name": "Swift",
+      "description": "Desarrolla aplicaciones web con React Hooks. Integra herramientas como Strapi, PayPal y Google Maps para desarrollar una tienda online con carrito de compras.",
+      "stock": 6,
+      "price": 258.3,
+      "type": "Mobile",
+      "category": "Carrera",
+      "url": "https://owius.com/wp-content/uploads/2019/05/wc-swift.jpg"
     } 
   ]
 }

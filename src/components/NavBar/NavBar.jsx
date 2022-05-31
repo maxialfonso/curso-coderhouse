@@ -16,8 +16,9 @@ const NavBar = () => (
 
                 <ListaNav categorias={categorias} />
 
-                <CartWidget />
-
+                <Link to={`/cart/`} style={{ textDecoration: 'none' }}>
+                    <CartWidget />
+                </Link>
             </nav>
         </section>
     </Link>

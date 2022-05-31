@@ -1,3 +1,4 @@
+import { ImportExport } from '@mui/icons-material';
 import React, { createContext, useState } from 'react';
 import PRODUCTS from "../../services/productos.json";
 
@@ -14,12 +15,25 @@ export function HOCContext({children}) {
         setCart([]);
     }
     
+    function removeToCart(id) {
+        const newCart = cart.filter( item => item.id !== id);
+        setCart(newCart);
+    }
+    
     function getCartQuantity() {
         return cart.length;
     }
     
     function getCantidadProductoEnCarro(index) {
         return cart[index].cantidad;
+    }
+
+    function getCantidadUnidadesEnCarro(index) {
+        return cart.reduce( ( acumulador, item ) => acumulador + Number(item.cantidad), 0)
+    }
+
+    function getPriceTotal() {
+       return cart.reduce( ( acumulador, item ) => acumulador + Number(item.subtotal), 0)
     }
 
     function getStockProducto(index) {
@@ -50,11 +64,9 @@ export function HOCContext({children}) {
     }
 
 
-    function addToCart(id, cant) {
+    function addToCart({ id, name, url, price }, cant) {
         //No se aceptan duplicados y tampoco se suma la cantidad que contenia antes. Directamente si el producto existe se reemplaza su nueva cantidad.
         const index = isInCart(id);
-        debugger;
-
        
         if ( index > -1 ) {
     
@@ -66,7 +78,8 @@ export function HOCContext({children}) {
                     if ( producto.id === id){
                         return {
                             ...producto,
-                            cantidad: cant
+                            cantidad: cant,
+                            subtotal: (price*cant).toFixed(2)
                         }
                     }
     
@@ -75,19 +88,28 @@ export function HOCContext({children}) {
 
                 setCart(nuevoCarro);
             }
-        } else {
             
-            setCart([ ...cart, { id: id, cantidad: cant}] );
-
+        } else { 
+            setCart([ 
+                ...cart, 
+                { 
+                    id, name, url, price, 
+                    cantidad: cant, 
+                    subtotal: (price*cant).toFixed(2)
+                }
+            ]);
         }
-
 
     }
 
   return (
     <CartContext.Provider value={{
+        cart,
         addToCart,
-        cart
+        removeToCart,
+        clearCart,
+        getCantidadUnidadesEnCarro,
+        getPriceTotal
     }}>
         {children}
     </CartContext.Provider>

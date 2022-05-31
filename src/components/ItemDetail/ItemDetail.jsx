@@ -95,7 +95,7 @@ export default function ItemDetail({ producto }) {
 
                     <Container maxWidth="xs">
                         {visibility
-                            ? <ItemCount id={producto.id} stock={producto.stock} init={0} onAdd={onAdd} />
+                            ? <ItemCount producto={producto} init={0} onAdd={onAdd} />
                             : <BtnFinalizarCompra/>
                         }
                     </Container>
