@@ -7,7 +7,7 @@ import Spinner from '../Spinner/Spinner';
 
 const ItemListContainer = ({ greeting }) => {
 
-  const { categoryName } = useParams();
+  const { categoryKey } = useParams();
 
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -21,10 +21,10 @@ const ItemListContainer = ({ greeting }) => {
       setLoading(true);
       setError(false);
 
-      const productsPromise = fetchItems({ categoryName });
+      const productsPromise = fetchItems({ categoryKey });
       productsPromise
         .then((resultado) => {
-
+        
           if (Array.isArray(resultado)) {
             setProductos(resultado)
           } else {
@@ -45,7 +45,7 @@ const ItemListContainer = ({ greeting }) => {
 
     fetchProductos();
 
-  }, [categoryName])
+  }, [categoryKey])
 
   if (error) { return (<>{mensajeError}</>) }
 

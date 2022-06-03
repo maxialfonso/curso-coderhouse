@@ -1,24 +1,77 @@
-import PRODUCTS from "../productos.json";
-const productos = PRODUCTS.productos;
+//@ts-check
+import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore";
 
+export function fetchItems({ id = "", categoryKey = "" }) {
+  
+    return new Promise((resolve, reject) => {
 
-export function fetchItems({id = "", categoryName = ""}) {
-    return new Promise ( (resolve, reject) =>{
+        const DB = getFirestore();
+
         setTimeout(() => {
 
-            if (id !== ""){ 
-                const item = productos.find( p => p.id === id );
-                resolve(item);
-            } 
-            
-            if (categoryName !== ""){ 
-                const productosCategoria = productos.filter( p => p.category === categoryName );
-                resolve(productosCategoria);
+            if (id !== "") {
+                const document = doc(DB, "items", id);
+
+                getDoc(document).then(async (item) => {
+                    const data = await normalizeItem(item.id, item.data());
+                    resolve(data);
+                })
             }
+
+            if (categoryKey !== "") {
                 
-            resolve(productos);
-            
+                const q = query(
+                    collection(DB, "items"),
+                    where( "category_key", "==", categoryKey)
+                );
+
+                getDocs(q).then(async ({ docs }) => {
+                    const data = await normalizeItems(docs);
+                    resolve(data);
+                })
+
+            }
+
+            const documents = collection(DB, "items");
+
+            getDocs(documents).then(async ({ docs }) => {
+                const data = await normalizeItems(docs);
+                resolve(data);
+            })
+
             // reject("Exploto todooo!");
         }, 2000)
+    })
+}
+
+
+function normalizeItem(id, item) {
+    return new Promise((resolve, reject) => {
+
+        if (item) {
+            const objeto = { id, ...item };
+            resolve(objeto);
+        } else {
+            reject("Error en la normalización del Item...");
+        }
+
+    })
+}
+
+function normalizeItems(items) {
+    return new Promise((resolve, reject) => {
+
+        if (items.length > 0) {
+
+            const objeto = items.map(item => {
+                return { id: item.id, ...item.data() }
+            });
+
+            resolve(objeto);
+
+        } else {
+            reject("Error en la normalización los Items...")
+        }
+
     })
 }

@@ -1,13 +1,11 @@
-import { ImportExport } from '@mui/icons-material';
 import React, { createContext, useState } from 'react';
-import PRODUCTS from "../../services/productos.json";
 
 export const CartContext = createContext("");
 
 
 export function HOCContext({children}) {
 
-    const productos = PRODUCTS.productos;
+    //const productos = PRODUCTS.productos;
 
     const [cart, setCart] = useState([]);
 
@@ -36,12 +34,12 @@ export function HOCContext({children}) {
        return cart.reduce( ( acumulador, item ) => acumulador + Number(item.subtotal), 0)
     }
 
-    function getStockProducto(index) {
+/*     function getStockProducto(index) {
         return productos[index].stock
-    }
+    } */
 
     // no tengo claro si hay que sumar a la cantidad existente o reemplazar por la que llega nueva.
-    function validacionInCart(index, cantidad) { 
+/*     function validacionInCart(index, cantidad) { 
 
         if ( cantidad <= 0 ){ return 0; }
         
@@ -57,7 +55,7 @@ export function HOCContext({children}) {
         }
 
         return 0;
-    }
+    } */
 
     function isInCart(id) {
         return cart.map(producto => producto.id).indexOf(id); ;

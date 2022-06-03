@@ -8,9 +8,6 @@ import ItemCount from "../ItemCount/ItemCount";
 import BtnFinalizarCompra from '../BtnFinalizarCompra/BtnFinalizarCompra';
 import { CartContext } from '../../contexts/CartContext/CartContext';
 
-// import { onAdd } from '../../services/functions/onAdd';
-
-
 export default function ItemDetail({ producto }) {
 
     const { addToCart } = useContext(CartContext)
@@ -54,7 +51,7 @@ export default function ItemDetail({ producto }) {
 
                         <Divider orientation="vertical" flexItem variant="middle" />
 
-                        <Typography variant="subtitle1" component="div"> {producto.category} </Typography>
+                        <Typography variant="subtitle1" component="div"> {producto.category_label} </Typography>
                     </Box>
 
                     <Typography variant="h4" component="div"> {producto.name} </Typography>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Item({ producto }) {
 
-  const { id, name, description, category, url } = producto;
+  const { id, name, description, category_label, url } = producto;
   
   return (
     <Link to={`/item/${id}`} style={{ textDecoration: 'none' }}>
@@ -21,7 +21,7 @@ function Item({ producto }) {
               {name}
             </Typography>
             <Typography variant="subtitle1" color="text.secondary" component="div">
-              {category}
+              {category_label}
             </Typography>
             <Typography variant="body2" color="text.secondary">
               {description}

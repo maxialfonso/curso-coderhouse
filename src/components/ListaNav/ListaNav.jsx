@@ -7,8 +7,8 @@ const ListaNav = ({ categorias }) => {
     return (
         <ul className="content_nav">
             {categorias.map((categoria) => (
-                <li key={categoria}>
-                    <NavLink to={`/category/${categoria}`}>{categoria}</NavLink>
+                <li key={categoria.key}>
+                    <NavLink to={`/category/${categoria.key}`}>{categoria.label}</NavLink>
                 </li>
             ))}
         </ul>
