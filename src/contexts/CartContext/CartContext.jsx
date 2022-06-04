@@ -5,8 +5,6 @@ export const CartContext = createContext("");
 
 export function HOCContext({children}) {
 
-    //const productos = PRODUCTS.productos;
-
     const [cart, setCart] = useState([]);
 
     function clearCart() {
