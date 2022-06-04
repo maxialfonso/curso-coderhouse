@@ -40,7 +40,7 @@ export function fetchItems({ id = "", categoryKey = "" }) {
             })
 
             // reject("Exploto todooo!");
-        }, 2000)
+        }, 1300)
     })
 }
 

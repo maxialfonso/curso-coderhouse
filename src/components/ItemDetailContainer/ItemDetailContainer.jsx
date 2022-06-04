@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from '@mui/system';
 import { useParams } from 'react-router-dom';
-import "./itemDetailContainer.css"
 import { fetchItems } from '../../services/fetch/fetchItems';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import Spinner from '../Spinner/Spinner';
