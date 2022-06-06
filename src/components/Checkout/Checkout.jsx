@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Divider, Paper, Typography, Button } from '@mui/material';
 import { CartContext } from "../../contexts/CartContext/CartContext";
 import "./checkout.css";
@@ -9,9 +9,11 @@ import { newOrder } from "../../services/fetch/fetchOrders.js"
 function Checkout() {
 
     const { getPriceTotal, getCantidadUnidadesEnCarro, clearCart, cart } = useContext(CartContext)
+    const [disabled, setDisabled] = useState(false);
 
     async function handleSubmit(e) {
         e.preventDefault();
+        setDisabled(true);
 
         const myOrder = {
             buyer: {
@@ -70,7 +72,7 @@ function Checkout() {
                     <input type="tel" name="phone" placeholder='Teléfono' className='inputCustom' required />
 
                     <div className='divBtn'>
-                        <Button variant="contained" type='submit'>Finalizar compra</Button>
+                        <Button variant="contained" type='submit' disabled={disabled} >Finalizar compra</Button>
                     </div>
                 </form>
 
