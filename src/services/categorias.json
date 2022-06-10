@@ -1,0 +1,17 @@
+{
+    "categorias": [
+        
+        {   "label": "Curso",
+            "key": "curso"
+        },
+        {   "label": "Carrera",
+            "key": "carrera"
+        },
+        {   "label": "Taller",
+            "key": "taller"
+        },
+        {   "label": "Diplomatura",
+            "key": "diplomatura"
+        }
+    ]
+}
