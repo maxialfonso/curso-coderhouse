@@ -10,7 +10,7 @@ const CartWidget = () => {
 
     return (
         <>
-            <IconButton size="large" aria-label="show 4 new mails" sx={{color:"white"}}>
+            <IconButton size="large" sx={{ color: "white" }}>
                 <Badge badgeContent={String(cart.length)} color="error">
                     <ShoppingCartIcon />
                 </Badge>

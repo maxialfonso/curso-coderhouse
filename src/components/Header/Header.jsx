@@ -1,11 +1,27 @@
-import React from 'react'
+import React, {useEffect, useContext} from 'react'
 import "./header.css"
 import NavBar from '../NavBar/NavBar'
+import { CartContext } from '../../contexts/CartContext/CartContext';
 
-const Header = () => (
-    <header>
-        <NavBar/>
-    </header>
-);
+function Header() {
 
-export default Header;
+    const { checkCart } = useContext(CartContext);
+
+    useEffect(() => {
+
+        function consultarLocalStorage() {
+            checkCart();
+        }
+
+        consultarLocalStorage();
+
+    }, []);
+
+    return (
+        <header>
+            <NavBar />
+        </header>
+    )
+}
+
+export default Header

@@ -5,6 +5,7 @@ import ListaNav from '../ListaNav/ListaNav';
 import Logo from '../Logo/Logo';
 import './NavBar.css';
 import { fetchCategories } from "../../services/fetch/fetchCategories.js"
+//import CATEGORIES from "../../services/categorias.json";
 
 
 function NavBar() {
@@ -13,7 +14,12 @@ function NavBar() {
 
     useEffect(() => {
 
+        //const categorias = CATEGORIES.categorias;
+
         function fetchCategorias() {
+
+            //setCategories(categorias);
+
             const categoriesPromise = fetchCategories();
 
             categoriesPromise

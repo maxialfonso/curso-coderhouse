@@ -14,8 +14,8 @@ export default function ItemDetail({ producto }) {
 
     const [visibility, setVisibility] = useState(true);
 
-    function onAdd(id, value) {
-        addToCart(id, value);
+    function onAdd(item, value) {
+        addToCart(item, value);
         setVisibility(false);
     }
 
