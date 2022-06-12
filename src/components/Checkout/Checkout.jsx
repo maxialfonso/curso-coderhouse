@@ -1,9 +1,10 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Divider, Paper, Typography, Button } from '@mui/material';
 import { CartContext } from "../../contexts/CartContext/CartContext";
 import "./checkout.css";
 
 import { newOrder } from "../../services/fetch/fetchOrders.js"
+import { validarInputs } from "../../services/functions/validateInput"
 
 
 function Checkout() {
@@ -31,8 +32,14 @@ function Checkout() {
 
         alert(`Orden confirmada: ${orderId}`);
     }
-    
 
+    useEffect(() => {
+     
+        validarInputs();
+
+    }, [])
+    
+    
     return (
         <Paper className='paper' elevation={4} >
             <div className="parrafoPaper">
@@ -67,9 +74,9 @@ function Checkout() {
                 <Typography variant="h6" > Formulario para envío  </Typography>
 
                 <form onSubmit={handleSubmit}>
-                    <input type="text" name="name" placeholder='Nombre completo' className='inputCustom' required />
-                    <input type="email" name="email" placeholder='Email' className='inputCustom' required />
-                    <input type="tel" name="phone" placeholder='Teléfono' className='inputCustom' required />
+                    <input id='name' type="text" name="name" placeholder='Nombre y apellido' className='inputCustom' required />
+                    <input id='email' type="email" name="email" placeholder='Email' className='inputCustom' required />
+                    <input id='tel' type="tel" name="phone" placeholder='Teléfono' className='inputCustom' required />
 
                     <div className='divBtn'>
                         <Button variant="contained" type='submit' disabled={disabled} >Finalizar compra</Button>
