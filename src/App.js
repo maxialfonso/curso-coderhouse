@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import { HOCContext } from './contexts/CartContext/CartContext';
 
-
 import Header from './components/Header/Header';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
@@ -24,9 +23,9 @@ function App() {
           <Header />
 
           <Routes>
-            <Route path='/' element={<Hero/>} />
-            <Route path='/tienda' element={<ItemListContainer greeting="Bienvenido" />} />
-            <Route path='/category/:categoryKey' element={<ItemListContainer greeting="Bienvenido" />} />
+            <Route path='/' element={<Hero greeting="Bienvenido"/>} />
+            <Route path='/tienda' element={<ItemListContainer/>} />
+            <Route path='/category/:categoryKey' element={<ItemListContainer/>} />
             <Route path='/item/:id' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<CartPage />} />
             <Route path='/cartDetail' element={<CartDetail />} />

@@ -5,7 +5,7 @@ import { fetchItems } from '../../services/fetch/fetchItems';
 import { useParams } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner';
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
 
   const { categoryKey } = useParams();
 
@@ -58,7 +58,6 @@ const ItemListContainer = ({ greeting }) => {
       }
       {!loading &&
         <Container>
-        <p>{greeting}</p>
         <ItemList productos={productos} />
       </Container>
       }
