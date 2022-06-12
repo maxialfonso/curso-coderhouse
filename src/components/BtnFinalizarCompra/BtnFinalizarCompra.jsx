@@ -15,7 +15,7 @@ function BtnFinalizarCompra() {
         </Grid>
 
         <Grid item xs={12}>
-          <Link to={`/`} style={{ textDecoration: 'none', paddingLeft:"12px" }}>
+          <Link to={`/tienda`} style={{ textDecoration: 'none', paddingLeft:"12px" }}>
             Seguir comprando
           </Link>
         </Grid>

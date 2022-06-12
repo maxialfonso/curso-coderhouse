@@ -3,18 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
-import { initializeApp } from "firebase/app";
-
-initializeApp(
-    {
-        apiKey: "AIzaSyCCQ83jtNtCJpMx4SfUVCpl74kafN3ivu0",
-        authDomain: "react-teco-coder.firebaseapp.com",
-        projectId: "react-teco-coder",
-        storageBucket: "react-teco-coder.appspot.com",
-        messagingSenderId: "480339606092",
-        appId: "1:480339606092:web:1076d1212d6a13043692e9"
-      }
-);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

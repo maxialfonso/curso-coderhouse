@@ -1,6 +1,17 @@
 import React, { createContext, useState } from 'react';
-
+import { initializeApp } from "firebase/app";
 import { getCartLocalStorage, addToCartLocalStorage, clearCartLocalStorage, removeItemCartLocalStorage } from "../../services/fetch/fetchCartLocalStorage"
+
+initializeApp(
+    {
+        apiKey: "AIzaSyCCQ83jtNtCJpMx4SfUVCpl74kafN3ivu0",
+        authDomain: "react-teco-coder.firebaseapp.com",
+        projectId: "react-teco-coder",
+        storageBucket: "react-teco-coder.appspot.com",
+        messagingSenderId: "480339606092",
+        appId: "1:480339606092:web:1076d1212d6a13043692e9"
+      }
+);
 
 export const CartContext = createContext("");
 

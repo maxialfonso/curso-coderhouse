@@ -6,7 +6,7 @@ export default function ItemList({productos}) {
 
     return (
         <>
-            <Grid sx={{ flexGrow: 1 }} container>
+            <Grid sx={{ flexGrow: 1, marginBottom: 10 }} container>
                 <Grid container justifyContent="flex-start" rowSpacing={6}>
                     {productos.map((producto) => (
                         <Grid item key={producto.id} xs={4}>

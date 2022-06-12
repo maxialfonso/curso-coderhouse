@@ -7,7 +7,7 @@ function EmptyCart() {
         <div className="error-container">
             <h1 className='titulo'>Sin Items</h1>
             <p className='subtitulo'>Seleccione algun item de la tienda...</p>
-            <Link className='return' to={"/"} style={{ textDecoration: 'none' }}> Regresar a Catálogo </Link>
+            <Link className='return' to={"/tienda"} style={{ textDecoration: 'none' }}> Regresar a Catálogo </Link>
         </div>
     )
 }

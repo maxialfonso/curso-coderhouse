@@ -13,6 +13,7 @@ import Error404Page from './pages/Error404Page/Error404Page';
 import Footer from './components/Footer/Footer';
 import CartPage from "./pages/CartPage/CartPage";
 import CartDetail from './components/CartDetail/CartDetail';
+import Hero from './components/Hero/Hero';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
           <Header />
 
           <Routes>
-            <Route path='/' element={<ItemListContainer greeting="Bienvenido" />} />
+            <Route path='/' element={<Hero/>} />
+            <Route path='/tienda' element={<ItemListContainer greeting="Bienvenido" />} />
             <Route path='/category/:categoryKey' element={<ItemListContainer greeting="Bienvenido" />} />
             <Route path='/item/:id' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<CartPage />} />
