@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Soft Store 
+___
+Es un proyecto que desarrollé durante el curso de React JS de Coderhouse.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Descripción 
+___
+Es en un e-commerce que posee una tienda general donde se encuentran todos los productos del catálogo que luego se pueden filtrar por diferentes categorías que se encuentran en el menú superior.
+Se puede acceder al detalle de cada producto. Desde ahí pueden ser agregados al carrito para luego completar un formulario simulando un proceso de compra. Al finalizar se ontiene el número de compra generado.
+Utilicé LocalStorage para almacenar el carrito de compras y Firebase para el listado de categorías, los productos y las ordenes de compra generadas.
 
-## Available Scripts
+# Demo 
+___
+Puede visitarse el deploy del proyecto en https://react-teco-coder.web.app/
 
-In the project directory, you can run:
+# Preview 
+___
 
-### `npm start`
+![GIF de muestra.](/public/demo-ecommerce.gif "Vista del proyecto.")
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Tecnologías y Herramientas
+___
+- React
+- React
+- JavaScript Vanilla
+- Material UI
+- HTML
+- CSS
+- LocalStorage
+- Firebase
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Instalación
+___
+Para ejecutar el proyecto clonar el repositorio:
+```
+git clone https://github.com/maxialfonso/curso-coderhouse.git
+cd curso-coderhouse
+```
+Instalar las dependencias:
+```
+npm install
+```
 
-### `npm test`
+Configurar Firebase:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Luego es necesario crear un proyecto en Firebase y crear dos colecciones en Firestore: una con el nombre de ```categories``` (tendrá las categorías a la que corresponden los productos, se mostrarán en la NavBar y sirven para el filtrado) y otra con el nombre```items``` (almacenamos todos los productos de la tienda).
+La colección ```orders``` NO es necesaria crearla. Lo hará automáticamente al generar la primer orden de compra.
+Los items de ambas colecciones deben crearse manualmente desde Firebase.
 
-### `npm run build`
+Ejemplo de category:
+```
+category = {
+  key: "curso"
+  label: "Curso"
+}
+```
+Ejemplo de product:
+```
+item = {
+  category_key: "curso"
+  category_label: "Curso"
+  description: "descripción"
+  name: "React"
+  price: 450
+  stock: 100
+  type: "Framework"
+  url: "url de la imagen"
+}
+```
+Tenemos las colecciones en Firebase listas con los items y categorias cargadas. Renombrar el archivo ```.env.example``` ubicado en la raíz del proyecto a ```.env``` y completar las variables de configuración con tus datos provistos por Firebase:
+```
+REACT_APP_FIREBASE_API_KEY=
+REACT_APP_FIREBASE_AUTH_DOMAIN=
+REACT_APP_FIREBASE_PROJECT_ID=
+REACT_APP_FIREBASE_STORAGE_BUCKET=
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=
+REACT_APP_FIREBASE_APP_ID=
+```
+Luego iniciar el servidor con:
+```npm start```
+El proyecto estará corriendo en ```http://localhost:3000```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Consideraciones adicionales
+___
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Vanilla JS
+Utilizado para funciones helpers, simulaciones de fetch, normalizar la información, controles de inputs, control de stock, entre otras.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+MaterialUI
+Lo elegí para conocer la librería y agilizar el proceso de desarrollo y estilado de la aplicación.
 
-### `npm run eject`
+Firebase
+Elegido para almacenar los items, el listado de las categorias, las órdenes de compra y el control de stock.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+LocalStorage
+lo utilicé para persistir el carrito de los usuarios en sus dispositivos en el caso de que no finalicen el flujo de compra para mejorar la experiencia de uso.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+HTML y CSS
+Utilizado para crear componentes a medida y controlar el comportamiento de los contenedores en la pantalla.

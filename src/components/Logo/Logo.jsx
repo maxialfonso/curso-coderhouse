@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <div className='contenedorLogo'>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>React Store</p>
+        <p>Soft Store</p>
     </div>
   )
 }

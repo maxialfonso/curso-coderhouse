@@ -11,7 +11,7 @@ const CartWidget = () => {
     return (
         <>
             <IconButton size="large" sx={{ color: "white" }}>
-                <Badge badgeContent={String(cart.length)} color="error">
+                <Badge badgeContent={String(cart ? cart.length : 0)} color="error">
                     <ShoppingCartIcon />
                 </Badge>
             </IconButton>

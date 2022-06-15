@@ -4,7 +4,13 @@ export function getCartLocalStorage() {
 
     return new Promise((resolve) => {
         const cart = localStorage.getItem("cart");
+       
+        if (!cart) {
+            resolve([]);
+        }
+
         resolve(JSON.parse(cart));
+        
     })
 }
 

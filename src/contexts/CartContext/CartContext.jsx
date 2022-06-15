@@ -63,41 +63,6 @@ export function HOCContext({ children }) {
     function getPriceTotal() {
         return cart.reduce((acumulador, item) => acumulador + Number(item.subtotal), 0)
     }
-
-
-    /*     function getCartQuantity() {
-            return cart.length;
-        }
-    
-        function getCantidadProductoEnCarro(index) {
-            return cart[index].cantidad;
-        } */
-
-    /*     function getStockProducto(index) {
-            return productos[index].stock
-        } */
-
-    // no tengo claro si hay que sumar a la cantidad existente o reemplazar por la que llega nueva.
-    /*     function validacionInCart(index, cantidad) { 
-/*     function validacionInCart(index, cantidad) { 
-    /*     function validacionInCart(index, cantidad) { 
-    
-            if ( cantidad <= 0 ){ return 0; }
-            
-            const cantidadCarro = getCantidadProductoEnCarro(index);
-            const stock = getStockProducto(index);
-            const ingreso = cantidadCarro + cantidad;
-    
-            if ( ingreso > stock ){
-                return stock;
-            }
-            if ( ingreso > 0 && ingreso <= stock ){
-                return ingreso;
-            }
-    
-            return 0;
-        } */
-
    
     // Helpers
     function isInCart(id) {
